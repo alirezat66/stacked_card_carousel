@@ -34,7 +34,7 @@ class StackedCardCarousel extends StatefulWidget {
     required List<Widget> items,
     StackedCardCarouselType type = StackedCardCarouselType.cardsStack,
     double initialOffset = 40.0,
-    double spaceBetweenItems = 400,
+    double spaceBetweenItems = 500,
     bool applyTextScaleFactor = true,
     PageController? pageController,
     OnPageChanged? onPageChanged,
@@ -139,13 +139,14 @@ class _StackedCardCarouselState extends State<StackedCardCarousel> {
               scale = 0.95 + (factor * 0.1 / 2);
             }
             return Positioned.fill(
-              top: -position + (20.0 * item.key),
+              top: -position + (20 * item.key),
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Wrap(
                   children: <Widget>[
                     Transform.scale(
-                      scale: scale,
+                      scaleX: scale,
+                      scaleY: 1,
                       child: item.value,
                     ),
                   ],

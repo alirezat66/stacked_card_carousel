@@ -12,6 +12,10 @@ dependencies:
     sdk: flutter
   stacked_card_carousel:
     path: ../
+  shopper_package:
+    git:
+      url: https://gitlab.com/shopassist2/mobile/shoper_package
+      ref: master
 
 dev_dependencies:
   flutter_test:
